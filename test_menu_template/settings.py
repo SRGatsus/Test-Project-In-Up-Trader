@@ -30,11 +30,9 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG')
-ALLOWED_HOSTS = ['*']
 DOMAIN_NAME = env('DOMAIN_NAME')
-
 # Application definition
-
+ALLOWED_HOSTS = [DOMAIN_NAME, '127.0.0.1']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

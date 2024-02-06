@@ -19,3 +19,35 @@ The project was completed as a test assignment for an interview with the company
 >  {% draw_menu 'main_menu' %}
 > ```
 > При выполнении задания из библиотек следует использовать только Django и стандартную библиотеку Python.
+
+
+## Launch for testing
+1. Create an .env file and specify the following parameters:
+   * DEBUG - responsible for the operation mode of the project
+   * SECRET_KEY - responsible for data encryption
+   * DOMAIN_NAME - responsible for the domain name on which the service will be raised
+2. Create a virtual environment and activate it (python version 3.10.4 was used when creating the project):
+```cmd
+   python -m venv venv
+```
+   * Activate virtual environment in Windows
+```cmd
+   venv\Scripts\activate
+```
+   * Activate virtual environment in Linux/Mac
+```cmd
+   source venv/bin/activate
+```
+3. Installing dependencies
+```pip
+   pip install -r requirements.txt
+```
+4. Database migration and creation of a superuser
+```cmd
+   python manage.py migrate
+   python manage.py createsuperuser
+```
+5. Project Launch
+```cmd
+   python manage.py runserver DOMAIN_NAME
+```
