@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def show_menu_test(request):
+    return render(request, 'base.html')
